@@ -1,28 +1,26 @@
-import { Box, styled } from "@mui/material";
-
-export const Mainhead = styled(Box)(() => ({
+export const stylesnew = (theme) => ({
+  head: {
     height: "100%",
     width: "1440px",
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     position: "relative",
-  }));
-
-export const stylesnew = {
+  },
   tabs: {
     "& .MuiTabs-indicator": {
-      backgroundColor: "#009065",
+      background: theme.palette.background.primary,
+      borderRadius: "20px",
       height: "3px",
     },
     minHeight: "0",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
   },
 
   tab: {
-    color: "#51585E",
-    "&.Mui-selected": { color: "#009065" },
+    color: theme.palette.text.secondary,
+    "&.Mui-selected": {
+      color: theme.palette.primary.main,
+    },
     textTransform: "none",
     alignItems: "start",
     justifyContent: "start",
@@ -30,12 +28,12 @@ export const stylesnew = {
     minHeight: "32px",
     minWidth: "0",
     padding: "0",
-    fontSize: "18px",
-    fontWeight: "bold",
+    fontSize: theme.typography.fontSize.extraMedium,
+    fontWeight: theme.typography.fontWeight.bold,
   },
 
   img: {
     position: "absolute",
-    left:'67px',
+    left: "67px",
   },
-};
+});

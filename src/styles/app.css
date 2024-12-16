@@ -10,5 +10,10 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: #ffffff;
+}
+
+@font-face {
+  font-family: "IBM_Plex_Serif";
+  font-display: swap;
+  src: url("../fonts/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf") format("woff2");
 }

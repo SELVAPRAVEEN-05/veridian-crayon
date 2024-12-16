@@ -1,80 +1,90 @@
-import { Box, styled } from "@mui/material";
 
-export const Main = styled(Box)(() => ({
-  padding: "67px",
-  width: "1306px",
-  margin: "0 auto",
-}));
+export const stylesnew = (theme) => ({
+  main: {
+    padding: "67px",
+    width: "1306px",
+    margin: "0 auto",
+  },
 
-export const Base = styled(Box)(() => ({
-  height: "100%",
-  width: "100%",
-  overflow: "scroll",
-  scrollbarWidth: "none",
-}));
+  base: {
+    height: "100%",
+    width: "100%",
+    overflow: "scroll",
+    scrollbarWidth: "none",
+  },
 
-export const First = styled(Box)(() => ({
-  height: "540px",
-  width: "1308px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  overflow: "hidden",
-  position: "relative",
-  backgroundColor: "#009065",
-  marginBottom: "65px",
-}));
+  mid: {
+    height: "2241px",
+    background: theme.palette.primary.lite,
+    width: "1308px",
+    overflow: "scroll",
+    scrollbarWidth: "none",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    position: "relative",
+  },
 
-export const Last = styled(Box)(() => ({
-  height: "285px",
-  width: "1308px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  overflow: "hidden",
-  position: "relative",
-  backgroundColor: "#009065",
-}));
+  first: {
+    height: "540px",
+    width: "1308px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    position: "relative",
+    background: theme.palette.background.primary,
+    marginBottom: "65px",
+  },
 
-export const Copyright = styled(Box)(() => ({
-  backgroundColor: "red",
-  height: "66px",
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  color: "#717B85",
-  backgroundColor: "#F5F7FA",
-  justifyContent: "center",
-  borderTop: "2px solid #CACFDB",
-}));
+  last: {
+    height: "285px",
+    width: "1308px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    position: "relative",
+    background: theme.palette.background.primary,
+  },
 
-export const Inside = styled(Box)(() => ({
-  height: "250px",
-  width: "976px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "space-between",
-  color: "#F5F7FA",
-}));
+  copyrightAb: {
+    height: "66px",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    background: theme.palette.background.bg3,
+    justifyContent: "center",
+    borderTop: "2px solid #CACFDB", // i have to do this
+  },
 
-export const Lanka = styled(Box)(() => ({
-  height: "200px",
-  width: "976px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "space-between",
-  color: "#F5F7FA",
-}));
+  inside: {
+    height: "250px",
+    width: "976px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    color: theme.palette.text.bg3,
+  },
 
-export const stylesnew = {
+  lanka: {
+    height: "200px",
+    width: "976px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    color: theme.palette.text.bg3,
+  },
+
   img1: {
     left: "0",
     position: "absolute",
   },
+
   img2: {
     right: "0",
     position: "absolute",
@@ -86,26 +96,28 @@ export const stylesnew = {
   },
 
   Investment: {
-    backgroundColor: "#F9C300",
+    backgroundColor: theme.palette.secondary.yell,
     padding: "5px 10px",
-    fontSize: "14px",
+    fontSize: theme.typography.fontSize.small,
     letterSpacing: "2px",
   },
 
   Empowering: {
     fontSize: "48px",
     textAlign: "center",
-    fontWeight: "700",
+    fontFamily:'IBM_Plex_Serif',
+    fontWeight: theme.typography.fontWeight.bold,
   },
 
   Knowmore: {
-    backgroundColor: "#0000004D",
+    backgroundColor: theme.palette.primary.mail,
+    color: theme.palette.text.white,
     height: "52px",
     width: "189px",
     display: "flex",
     cursor: "pointer",
-    fontSize: "18px",
-    fontWeight: "600",
+    fontSize: theme.typography.fontSize.extraMedium,
+    fontWeight: theme.typography.fontWeight.semiBold,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -113,19 +125,67 @@ export const stylesnew = {
   Copyright: {
     width: "1308px",
     display: "flex",
+    color: theme.palette.text.tertiary,
     justifyContent: "space-between",
   },
 
   email: {
     height: "52px",
     width: "342px",
-    backgroundColor:'#0000004D',
-    display:'flex',
-    alignItems:'center'
+    backgroundColor: theme.palette.primary.mail,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    fontWeight: theme.typography.fontWeight.semiBold,
+    fontSize: theme.typography.fontSize.large,
   },
 
   contact: {
     fontSize: "32px",
     fontWeight: "bold",
   },
-};
+
+  mail: {
+    backgroundColor: theme.palette.secondary.yell,
+    letterSpacing: "1px",
+    color: theme.palette.text.primary,
+    padding: "4px",
+    fontSize: theme.typography.fontSize.verySmall,
+    marginLeft: "22px",
+  },
+
+  rarrow: {
+    backgroundColor: "#00000033",
+    height: "52px",
+    width: "43px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  About: {
+    marginTop: "48px",
+    marginBottom: "24px",
+    color: theme.palette.text.primary,
+    fontSize: "32px",
+    fontWeight: "bold",
+  },
+
+  box1: {
+    height: "200px",
+    width: "1026px ",
+    padding: "48px",
+    backgroundColor: theme.palette.background.default,
+    display: "flex",
+  },
+
+  phothoes: {
+    marginRight: "32px",
+  },
+
+  Notes: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+});
